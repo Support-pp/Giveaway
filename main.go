@@ -21,5 +21,6 @@ func main() {
 	//Webserver
 	router := mux.NewRouter()
 	router.HandleFunc("/api/new", HandleQuestion).Methods("POST")
+	router.HandleFunc("/api/internal", VerifyRequest).Methods("POST")
 	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }

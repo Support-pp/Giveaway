@@ -35,6 +35,11 @@ type ResultAPI struct {
 	Code   string `json:"code"`
 }
 
+type ResultInternalAPI struct {
+	UID   int    `json:"uid"`
+	Fname string `json:"fname"`
+}
+
 var conString = os.Getenv("DBCON")
 
 func checkIfEmailExist(email string) bool {
@@ -141,6 +146,7 @@ func createAnswear(uid int, answear string) {
 }
 
 func getAuthByCode(code string) PhoneValied {
+	fmt.Println("Debug :: " + code)
 	db, err := sql.Open("mysql", conString)
 	if err != nil {
 		panic(err.Error())
@@ -166,4 +172,32 @@ func getAuthByCode(code string) PhoneValied {
 
 	db.Close()
 	return PhoneValied{UID: 0}
+}
+
+func getUserById(uid int) User {
+	db, err := sql.Open("mysql", conString)
+	if err != nil {
+		panic(err.Error())
+	}
+	defer db.Close()
+
+	fmt.Println("")
+	results, err := db.Query("SELECT * FROM userDB WHERE id=?", uid)
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+
+	for results.Next() {
+		var tag User
+		err = results.Scan(&tag.UID, &tag.Email, &tag.FirstName, &tag.blocked)
+		if err != nil {
+			panic(err.Error())
+		}
+		fmt.Println("	[CheckPoint] get user with id :: ", tag.UID)
+		db.Close()
+		return tag
+	}
+
+	db.Close()
+	return User{UID: 0}
 }

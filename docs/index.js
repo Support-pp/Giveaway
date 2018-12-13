@@ -69,10 +69,23 @@ function callAPIRequest(aArray) {
         console.log(response);
         rep = JSON.parse(response)
         document.getElementById("code-p").innerHTML = rep.code
-        $('#basicExampleModal').modal('show')
+        $('#callModal').modal('show')
+
+        document.getElementById("doneBlocker").classList.remove('none');
+        document.getElementById("questionForm").classList.add('none');
+        localStorage.setItem('code', rep.code);
+        document.getElementById("code-pp").innerText = localStorage.getItem('code')
     }).fail(function(data){
         document.getElementById("qx").innerHTML = "Your are already on the giveaway list!"
         document.getElementById("qx").classList.remove('none');
     });
 }
 
+
+$( document ).ready(function() {
+    if (localStorage.getItem('code') != null){
+        document.getElementById("code-pp").innerText = localStorage.getItem('code')
+        document.getElementById("doneBlocker").classList.remove('none');
+        document.getElementById("questionForm").classList.add('none');
+    }
+});

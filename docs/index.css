@@ -94,6 +94,7 @@ i.mgicc {
     position: fixed;
     bottom: 50px;
     right: 25px;
+    z-index: 99;
 }
 #bottom_right_present img {
     width: 15rem;

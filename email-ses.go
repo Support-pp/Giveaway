@@ -12,11 +12,11 @@ import (
 )
 
 func sendSubmittMessage(name string, email string, code string) {
-
-	Sender := "givaway@support-pp.de"
+	//TODO: Rename function to sendSubmitMessage
+	Sender := "giveaway@support-pp.de"
 	Recipient := email
-	Subject := "[Support++] Gewinnspiel Teilnahmebestätigung!"
-	HtmlBody := "Hey " + name + ", <br><br> mit dieser E-Mail möchten wir deine Teilname bestätigen! <br> Wir drücken dir die Daumen, am ??.??.2018 erfährst du ob due einer der glückelichen bist.<br><br> Ein kleiner Schritt fehlt jedoch noch! <br>Bitte rufe die komplett kostenfreie Telefonummer <b>800 4030172</b> anrufen und diesen Code eingeben: <code>" + code + "</code> !<br><br> Bitte beachte hierzu auch die<a href='https://givaway.support-pp.de/agb'>Teilnahmebedinngungen</a> <br><br> Dein Pirat John und das Support++ Team."
+	Subject := "[Support++] Giveaway participation confirmation!"
+	HtmlBody := "Hey " + name + ", <br><br> with this e-mail we would like to confirm your participation! <br> We keep our fingers crossed for you, on 23.12.2018 you will find out if you are one of the lucky ones.<br><br> But a small step is missing! <br>Please call <b>+49 30 22957907</b> (Europe) or <b>+1 216 350 1737</b> (America) and enter this code: <code>" + code + "</code> !<br><br>Please also refer to the<a href='https://givaway.support-pp.de/agb'>conditions of participation</a>. <br><br> Your Pirate John and the Support++ Team."
 	CharSet := "UTF-8"
 
 	sess, err := session.NewSession(&aws.Config{

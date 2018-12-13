@@ -81,7 +81,7 @@ i.mgicc {
 }
 
 #top_lights {
-    position: fixed;
+    position: absolute;
     top: -300px;
     right:-200px;
     transform: rotate(5deg);

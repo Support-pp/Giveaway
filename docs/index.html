@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Giveaway | Support++</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <link href="./index.css" rel="stylesheet">
+
+    <meta property="og:title" content="Support++ - sounds" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Eine liste mit allen offiziellen sound tracks." />
+    <meta property="og:url" content="https://sounds.support-pp.de" />
+    <meta property="og:image" content="https://support-pp.de/assets/img/help.png" />
+    <style>
+        #black{
+        color: black;
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="https://support-pp.de/assets/img/help.png" type="image/png" />
+
+</head>
+
+<body>
+
+    <nav class="mb-4 navbar navbar-expand-lg navbar-dark unique-color-white">
+        <a class="navbar-brand" href="#" style="color:#2196F3; font-weight: bold;"><img src="https://support-pp.de/assets/img/help.png"
+                height="40" alt="">Support++</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+
+    <div class="container darken-grey-text mb-4">
+        <h3 class="text-center font g mb-3 t-10">Support++ giveaway</h3>
+        <h3 class="text-center font mb-3 size3">Christmas giverway 2018! Good Luck!</h3>
+
+    </div>
+    <!--</div>-->
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-7">
+
+            <div class="alert alert-danger none" id="qx" role="alert">
+                Error Box :P
+            </div>
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Verify your giveaway register!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             Please call the number <code>0800 18 18 24 7</code> and insert your Code: <code id="code-p">99789</code>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      
+
+            <form target="_top">
+
+                <label for="q1">[1] Qurestion 1</label>
+                <input required type="text" id="q1" placeholder="Answear!" size="40"><br><br>
+
+                <label for="q2">[2] Qurestion 2</label>
+                <input required type="text" id="q2" placeholder="Answear!" size="40"><br><br>
+
+                <label for="q3">[3] Qurestion 3</label>
+                <input required type="text" id="q3" placeholder="Answear!" size="40"><br><br>
+
+                <label for="q4">[4] Qurestion 4</label>
+                <input required type="text" id="q4" placeholder="Answear!" size="40"><br><br>
+
+
+                <input required type="text" id="fname" placeholder="Xour first name." size="40"><br><br>
+                <input required type="email" id="email" placeholder="Type your email" size="40"><br><br>
+
+                <div class="custom-control custom-checkbox checkbox-warning-filled">
+                    <input type="checkbox" class="custom-control-input" name="cc2" id="checkAGB">
+                    <label class="custom-control-label" required for="checkAGB">I'm over 16 years. I accept
+                        the private police and the giveaway terms. </label>
+                </div>
+
+                <div class="text-center darken-grey-text mt-3 mb-4">
+                    <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lf1-n8UAAAAADF14iPIVvuJhNhmNwlJkSMnb1iB"></div>
+                    <input class="btn btn-danger" onclick="submitAnswear(4);" value="Start Giveaway!">
+
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    </div>
+
+    <script>
+
+        function CreateAPIToken() {
+
+            var checkBox = document.getElementById("checkAGB").checked;
+
+            if (document.getElementById("email").value == "") {
+                document.getElementById("noEmail").classList.remove('none');
+                return;
+            } else {
+                document.getElementById("noEmail").classList.add('none');
+            }
+            if (grecaptcha.getResponse() == "") {
+                document.getElementById("noGrecaptcha").classList.remove('none');
+                console.log("Error, recaptcha!")
+                return;
+            } else {
+                document.getElementById("noGrecaptcha").classList.add('none');
+            }
+
+            if (!checkBox) {
+                document.getElementById("noAccept").classList.remove('none');
+                return;
+            } else {
+                document.getElementById("noAccept").classList.add('none');
+            }
+            console.log("test :: " + grecaptcha.getResponse())
+        }
+
+
+    </script>
+
+
+    <div class="text-center darken-grey-text mb-4">
+        <h3 class="text-center font g mb-3 t-10">//ToDo Preise</h3>
+
+    </div>
+
+
+</body>
+
+<!-- Footer -->
+
+<footer class="page-footer font-small pt-4" style="background-color: #F1F3F4; margin-top: 70px;">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <img id="img" src="./magiccoder-brand.png" width="240px;" style="margin-left: 30px;">
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase" id="black">Legal</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://magiccoder.de/datenschutz" id="black">Datenschutz</a>
+                    </li>
+                    <li>
+                        <a href="https://magiccoder.de/impressum" id="black">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="https://magiccoder.de" id="black">magiCCoder</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase" id="black">Support++</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://support-pp.de" id="black">Webseite</a>
+                    </li>
+
+                    <li>
+                        <a href="https://pay.mgicc.de/support-pp.de" id="black"><code>PRO</code></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

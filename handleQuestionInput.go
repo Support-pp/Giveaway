@@ -17,7 +17,7 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 
 	r.ParseForm()
 	challenge := r.PostFormValue("g-recaptcha-response")
-	//ip, _, _ := net.SplitHostPort(r.RemoteAddr)
+	ip, _, _ := net.SplitHostPort(r.RemoteAddr)
 	email := r.PostFormValue("email")
 	fname := r.PostFormValue("fname")
 	answear := r.PostFormValue("answear")

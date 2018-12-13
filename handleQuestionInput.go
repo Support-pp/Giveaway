@@ -26,7 +26,7 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(400)
 		return
 	}
-	/*
+	
 		result, err := recaptcha.Confirm(ip, challenge)
 		if err != nil {
 			log.Println("recaptcha server error", err)
@@ -35,7 +35,7 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(401)
 			return
 		}
-	*/
+	
 	// Request is valied with google
 	if email == "" {
 		w.WriteHeader(400)

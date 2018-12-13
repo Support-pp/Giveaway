@@ -18,6 +18,7 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 	fname := r.PostFormValue("fname")
 	answear := r.PostFormValue("answear")
 	if challenge == "" {
+		fmt.Println("	-> no google!")
 		w.WriteHeader(400)
 		return
 	}
@@ -34,14 +35,17 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 	// Request is valied with google
 	if email == "" {
 		w.WriteHeader(400)
+		fmt.Println("	-> no mail!")
 		return
 	}
 	if answear == "" {
+		fmt.Println("	-> no answear!")
 		w.WriteHeader(400)
 		return
 	}
 
 	if fname == "" {
+		fmt.Println("	-> no fname!")
 		w.WriteHeader(400)
 		return
 	}

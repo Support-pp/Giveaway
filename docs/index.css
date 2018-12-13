@@ -1,3 +1,141 @@
+/*==========================================
+ *               Fonts
+ *==========================================*/
+@font-face {
+    font-family: 'magiccoder';
+    src: url("fonts/magiccoder.eot?uut6rr");
+    src: url("fonts/magiccoder.eot?uut6rr#iefix") format("embedded-opentype"), url("fonts/magiccoder.ttf?uut6rr") format("truetype"), url("fonts/magiccoder.woff?uut6rr") format("woff"), url("fonts/magiccoder.svg?uut6rr#magiccoder") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+i.mgicc {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'magiccoder' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.mgicc-magicstar:before {
+    content: "\e901"; }
+
+.mgicc-mgicc:before {
+    content: "\e902"; }
+
+.mgicc-magiccoder:before {
+    content: "\e900"; }
+
+/*==========================================
+ *                Animation
+ *==========================================*/
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+}
+
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+.swingimage{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 1s ease-in-out forwards infinite;
+    animation: swinging 1s ease-in-out forwards infinite;
+}
+
+/*==========================================
+ *                   CSS
+ *==========================================*/
 .none{
     display: none;
+}
+
+#prices {
+    padding-left: 30px;
+    text-align: left;
+}
+
+#prices li:before {
+    font-size: 1.5rem;
+    margin-left: -30px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+#prices li._1x:before {
+    content: "1x";
+}
+#prices li._2x:before {
+    content: "2x";
+}
+#prices li._3x:before {
+    content: "3x";
+}
+
+#top_lights {
+    position: fixed;
+    top: -300px;
+    right:-200px;
+    transform: rotate(5deg);
+    z-index: 100;
+    width: 100%;
+    height: 150px;
+    pointer-events: none;
+}
+#bottom_right_present {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+}
+#bottom_right_present img {
+    width: 15rem;
+    height: auto;
+}
+
+#doneBlocker {
+    position: absolute;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-right: 25%;
+    margin-left: calc(25% - 15px);
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    background-color: #e9e9e9;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c3c3c3' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+#doneBlocker .content {
+    width: auto;
+    height: 100%;
+}
+
+
+@media (max-width: 991.98px) {
+    #bottom_right_present {
+        display: none;
+    }
+
+    #top_lights {
+        display: none;
+    }
+
+    #doneBlocker {
+        max-width: 100%;
+        -ms-flex: none;
+        flex: none;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 }

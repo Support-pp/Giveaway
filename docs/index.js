@@ -1,12 +1,12 @@
 //qId = count of the question!
 function submitAnswear(qId) {
-    reset()
+    reset();
 
     var aArray =[];
     //Check Question...
     for (i = 1; i < qId + 1; i++) {
         if (document.getElementById("q" + i).value == "") {
-            document.getElementById("qx").innerHTML = "No Answear for Question " + i + "?"
+            document.getElementById("qx").innerHTML = "You didn't answer question " + i + "?";
             document.getElementById("qx").classList.remove('none');
             return;
         }
@@ -14,21 +14,21 @@ function submitAnswear(qId) {
 
     //Check mail
     if (document.getElementById("email").value == "") {
-        document.getElementById("qx").innerHTML = "We need your email. It is a important communication tool!"
+        document.getElementById("qx").innerHTML = "We need your email. It is a important communication tool!";
         document.getElementById("qx").classList.remove('none');
         return;
     }
 
     //Check accept
     if (!document.getElementById("checkAGB").checked) {
-        document.getElementById("qx").innerHTML = "You are younger than 16? Please accept the agb / private policy box if you over 16 Years!"
+        document.getElementById("qx").innerHTML = "You are younger than 16? Please accept the private policy and giveaway terms box if you over 16 Years!";
         document.getElementById("qx").classList.remove('none');
         return;
     }
 
     //Check google recaptcha
     if (grecaptcha.getResponse() == "") {
-        document.getElementById("qx").innerHTML = "You are a bot? If not accept the google recaptcha!"
+        document.getElementById("qx").innerHTML = "You are a bot? If not accept the google recaptcha!";
         document.getElementById("qx").classList.remove('none');
         return;
     }
@@ -71,7 +71,7 @@ function callAPIRequest(aArray) {
         document.getElementById("code-p").innerHTML = rep.code
         $('#basicExampleModal').modal('show')
     }).fail(function(data){
-        document.getElementById("qx").innerHTML = "Your are allready on the giveaway list!"
+        document.getElementById("qx").innerHTML = "Your are already on the giveaway list!"
         document.getElementById("qx").classList.remove('none');
     });
 }

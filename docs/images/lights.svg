@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 765 990" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a">
+   <stop stop-color="#ff0707" offset="0"/>
+   <stop stop-color="#ad1a00" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b">
+   <stop stop-color="#248a24" offset="0"/>
+  </linearGradient>
+  <radialGradient id="v" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.99589 .090562 -.094335 1.0374 -478.34 76.562)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="w" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(1 0 0 1.0417 -75.863 99.666)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <radialGradient id="x" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.99999 .004961 -.0051677 1.0417 -351.8 116.62)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <radialGradient id="y" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(1 0 0 1.0417 143.88 132.8)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <radialGradient id="u" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.76865 .63968 -.66633 .80067 -288.25 -262.52)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="t" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.91861 .39517 -.41163 .95688 -259.47 -90.917)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="o" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(1 0 0 1.0417 107.25 102.28)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="z" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.87755 .47949 -.49946 .91411 -363.59 -147.32)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <radialGradient id="p" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.97278 -.23174 .2414 1.0133 -72.9 132.44)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="r" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(1 0 0 1.0417 -225.84 83.971)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="s" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(.91861 .39517 -.41163 .95688 -168.25 -66.863)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="q" cx="152.6" cy="370.45" r="10.464" gradientTransform="matrix(1 0 0 1.0417 -127.31 78.739)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+ </defs>
+ <g fill="none" stroke="#000">
+  <g stroke-width="1.159">
+   <path d="m10.65 187.39c255.58 69.232 608.67 15.062 753.64-63.971"/>
+   <path d="m14.138 177.8c18.286 4.9534 13.528 24.099 32.701 27.825 22.015 4.2784 55.903-14.192 78.819-11.728 16.941 1.8213 24.43 25.954 41.589 27.071 24.21 1.5768 41.476-11.761 65.601-12 8.1661-0.0807 38.102 19.832 46.204 19.63 15.978-0.39998 36.928-19.486 52.376-20.6 12.976-0.93628 37.064 16.316 49.591 15.137 10.571-0.99559 26.992-19.598 37.066-20.914 7.3145-0.95582 35.421 12.888 42.469 11.883 10.731-1.53 35.735-23.26 45.43-25.069 15.836-2.9552 34.642 14.268 48.013 11.445 10.882-2.2977 28.427-17.919 37.707-22.519 44.4-22.004 43.392-5.5865 58.758-6.131 17.656-0.62567 4.9744-6.6829 45.84-25.794 5.2356-2.4485 34.726 1.8055 44.056-0.82502 11.638-3.2813 18.366-29.092 27.422-31.382"/>
+  </g>
+  <path d="m225.84 298.52z"/>
+ </g>
+ <g transform="translate(-107.25 -117.72)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#o)" opacity=".99"/>
+ </g>
+ <g transform="matrix(.97278 .23174 -.23174 .97278 94.379 -128.63)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#p)" opacity=".99"/>
+ </g>
+ <g transform="translate(127.31 -94.174)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#q)" opacity=".99"/>
+ </g>
+ <g transform="translate(225.84 -99.406)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="url(#r)" opacity=".99"/>
+ </g>
+ <g transform="matrix(.91861 -.39517 .39517 .91861 193.52 -22.367)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#s)" opacity=".99"/>
+ </g>
+ <g transform="matrix(.91861 -.39517 .39517 .91861 286.83 -36.319)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#t)" opacity=".99"/>
+ </g>
+ <g transform="matrix(.76865 -.63968 .63968 .76865 409.97 -4.1891)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#u)" opacity=".99"/>
+ </g>
+ <g transform="matrix(.99589 -.090562 .090562 .99589 472.29 -134.97)">
+  <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(1.744 -31.391)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#v)" opacity=".99"/>
+ </g>
+ <g transform="translate(195.32 .87198)">
+  <g transform="translate(-339.2 -148.24)">
+   <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+   <path transform="translate(1.744 -32.263)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#y)" opacity=".99"/>
+  </g>
+  <rect x="29.647" y="206.96" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(-117.72 -147.37)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="url(#w)" opacity=".99"/>
+  <rect transform="rotate(-.28425)" x="306.69" y="188.17" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="matrix(.99999 -.004961 .004961 .99999 157.63 -166.06)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="url(#x)" opacity=".99"/>
+  <g transform="matrix(.87755 -.47949 .47949 .87755 210.07 -63.608)">
+   <rect x="149.98" y="322.93" width="9.5918" height="12.208" opacity=".99"/>
+   <path transform="translate(1.744 -32.263)" d="m163.06 370.45c0 6.0198-4.6848 10.9-10.464 10.9-5.779 0-10.464-4.88-10.464-10.9 0-6.0198 4.6848-10.9 10.464-10.9 5.779 0 10.464 4.88 10.464 10.9z" fill="url(#z)" opacity=".99"/>
+  </g>
+ </g>
+ <g transform="matrix(.91861 -.39517 .39517 .91861 97.605 121.51)">
+  <rect x="-19.478" y="72.525" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="translate(-167.71 -281.8)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="#000080" opacity=".99"/>
+  <rect x="172.4" y="169.31" width="9.5918" height="12.208" opacity=".99"/>
+  <g fill="#ff0">
+   <path transform="translate(24.165 -185.02)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" opacity=".99"/>
+   <path transform="translate(-167.71 -281.8)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" opacity=".99"/>
+  </g>
+  <rect transform="matrix(.92202 .38713 -.38713 .92202 0 0)" x="319.95" y="83.475" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="matrix(.92202 .38713 -.38713 .92202 263.18 -183.25)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="#ff0" opacity=".99"/>
+  <rect transform="matrix(.92202 .38713 -.38713 .92202 0 0)" x="509.49" y="48.506" width="9.5918" height="12.208" opacity=".99"/>
+  <path transform="matrix(.92202 .38713 -.38713 .92202 451.47 -142.12)" d="m163.06 370.45a10.464 10.9 0 1 1 -20.928 0 10.464 10.9 0 1 1 20.928 0z" fill="#ff0" opacity=".99"/>
+ </g>
+</svg>

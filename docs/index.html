@@ -7,199 +7,286 @@
     <title>Giveaway | Support++</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <script type="text/javascript" src="./index.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <link href="./index.css" rel="stylesheet">
 
-    <meta property="og:title" content="Support++ - Giveaway" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Christmas Giveaway - 2018" />
-    <meta property="og:url" content="https://giveaway.support-pp.de" />
-    <meta property="og:image" content="https://support-pp.de/assets/img/help.png" />
+    <meta property="og:title" content="Support++ - Giveaway"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Christmas Giveaway - 2018"/>
+    <meta property="og:url" content="https://giveaway.support-pp.de"/>
+    <meta property="og:image" content="https://support-pp.de/assets/img/help.png"/>
     <style>
-        #black{
-        color: black;
+        #black {
+            color: black;
         }
 
     </style>
-
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="https://support-pp.de/assets/img/help.png" type="image/png" />
+    <link rel="shortcut icon" href="https://support-pp.de/assets/img/help.png" type="image/png"/>
 
 </head>
 
 <body>
 
-    <nav class="mb-4 navbar navbar-expand-lg navbar-dark unique-color-white">
-        <a class="navbar-brand" href="#" style="color:#2196F3; font-weight: bold;"><img src="https://support-pp.de/assets/img/help.png"
-                height="40" alt="">Support++</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+<nav class="mb-4 navbar navbar-expand-lg navbar-dark unique-color-white">
+    <a class="navbar-brand" href="#" style="color:#2196F3; font-weight: bold;"><img src="https://support-pp.de/assets/img/help.png"
+                                                                                    height="40" alt="">Support++</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
             aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    </nav>
-
-    <div class="container darken-grey-text mb-4">
-        <h3 class="text-center font g mb-3 t-10">Support++ giveaway</h3>
-        <h3 class="text-center font mb-3 size3">Christmas giveway 2018! Good Luck!</h3>
-
-    </div>
-    <!--</div>-->
-    <div class="row">
-        <div class="col"></div>
-        <div class="col-md-7">
-
-            <div class="alert alert-danger none" id="qx" role="alert">
-                Error Box :P
-            </div>
-
-      
-      <!-- Modal -->
-      <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Verify your giveaway register!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+</nav>
+<!-- Modal -->
+<div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header font-wight-bold" style="background-color: #fe6c19;">
+                <h5 class="modal-title" id="callModalLabel">Verify your giveaway registration!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
-             Please call the number <code>0800 18 18 24 7</code> and insert your Code: <code id="code-p">99789</code>
+                <p>
+                    To verify your submit, please call one of our verification numbers and enter the given code.
+                </p>
+                <p>
+                    Europe:<br>
+                    <code>+49 30 22957907</code><br>
+                </p>
+                <p>
+                    South and North America:<br>
+                    <code>+1 216 350 1737</code>
+                </p>
+                <p class="text-undeline" style="font-size: 1.5rem">
+                    <b>Your Code:</b> <code id="code-p">12345</code>
+                </p>
             </div>
-    
-          </div>
+
         </div>
-      </div>
-      
+    </div>
+</div>
+<div id="top_lights"><img src="./images/lights.svg" style="width: 75%; height: auto; margin-left: auto; margin-right: auto;" alt=""></div>
+<div id="bottom_right_present">
+    <img src="./images/present.svg" alt="">
+</div>
+<div class="container darken-grey-text" style="margin-top: 5rem">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-7 text-center">
+            <h1 class="h1-responsive"><i class="swingimage fas fa-bell"></i>&nbsp;&nbsp;Support++ X-Mas Giveaway&nbsp;&nbsp;<i class="swingimage fas fa-bell"></i>
+            </h1>
+            <h3 class="h3-responsive">Christmas Giveaway 2018!<br>
+                <b>Good Luck!</b></h3>
+            <hr>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-6 text-center">
+            <h2 class="h2-responsive"> The prices</h2>
+            <p class="text-justify mb-2">Huge thanks to our Partner <a href="https://dathosting.eu/aff.php?aff=193">DATHosting.eu</a> to provide ous prices which we
+                can raffle together. With them we raffle these prices:</p>
+            <ul class="list-unstyled d-inline-block mb-2" id="prices">
+                <li class="_1x">TeamSpeak 3 Server with 10 Slots<br>
+                    + one SinusBot
+                    <small class="text-muted">(Hosted)</small>
+                    <br>
+                    + Support++ pro version
+                </li>
+                <li class="_1x">SinusBot
+                    <small class="text-muted">(Hosted)</small>
+                    <br>
+                    + Support++ pro version
+                </li>
+                <li class="_1x">SinusBot
+                    <small class="text-muted">(Hosted)</small>
+                </li>
+                <li class="_3x">Support++ pro version</li>
+            </ul>
+            <p>To participate just answer these four questions and fill in your first name and your e-mail address.</p>
+            <p class="font-weight-bold">You need a phone to complete this form!</p>
+            <hr>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<div class="container darken-grey-text mb-4 position-relative">
+    <div id="doneBlocker" class="none">
+        <div class="content d-flex justify-content-center flex-column">
+            <h1 class="display-2"><i class="fas fa-lock"></i></h1>
+            <h2 class="h2-responsive">You already participated!</h2>
 
-            <form target="_top">
+            <hr class="hr-dark" style="width: 90%">
+            <h4 class="h4-responsive">We announce the winners on 23.12.2018<br>at 20:00 GMT+1 live on Twitch.tv</h4>
+            <p>Don't forget to verify your phone number by calling one of numbers:</p>
+            <p>
+                Europe:<br>
+                <code>+49 30 22957907</code><br>
+            </p>
+            <p>
+                South and North America:<br>
+                <code>+1 216 350 1737</code>
+            </p>
+            <p class="text-undeline" style="font-size: 1.5rem">
+                <b>Your Code:</b> <code id="code-p">12345</code>
+            </p>
 
-                <label for="q1">[1] Qurestion 1</label>
-                <input required type="text" id="q1" placeholder="Answear!" size="40"><br><br>
-
-                <label for="q2">[2] Qurestion 2</label>
-                <input required type="text" id="q2" placeholder="Answear!" size="40"><br><br>
-
-                <label for="q3">[3] Qurestion 3</label>
-                <input required type="text" id="q3" placeholder="Answear!" size="40"><br><br>
-
-                <label for="q4">[4] Qurestion 4</label>
-                <input required type="text" id="q4" placeholder="Answear!" size="40"><br><br>
-
-
-                <input required type="text" id="fname" placeholder="Your first name." size="40"><br><br>
-                <input required type="email" id="email" placeholder="Type your email" size="40"><br><br>
-
-                <div class="custom-control custom-checkbox checkbox-warning-filled">
-                    <input type="checkbox" class="custom-control-input" name="cc2" id="checkAGB">
-                    <label class="custom-control-label" required for="checkAGB">I'm over 16 years. I accept
-                        the <a href="">private police</a> and the <a href="">giveaway terms</a>. </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-6 mt-3">
+            <form>
+                <h4 class="h4-responsive">Questions</h4>
+                <div class="alert alert-danger none" id="qx" role="alert">
                 </div>
-
-                <div class="text-center darken-grey-text mt-3 mb-4">
-                    <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lf1-n8UAAAAADF14iPIVvuJhNhmNwlJkSMnb1iB"></div>
-                    <input class="btn btn-danger" onclick="submitAnswear(4);" value="Start Giveaway!">
-
+                <div class="md-form">
+                    <input class="form-control" id="q1" type="text" required>
+                    <label for="q1">In which year was Support++ released for the first time?</label>
+                </div>
+                <div class="md-form">
+                    <input class="form-control" id="q2" type="text" required>
+                    <label for="q2">On which platform do you can view the source code?</label>
+                </div>
+                <div class="md-form">
+                    <input class="form-control" id="q3" type="text" required>
+                    <label for="q3">How many team members does Support++ have?</label>
+                </div>
+                <div class="md-form">
+                    <input class="form-control" id="q4" type="text" required>
+                    <label for="q4">How many modules are available in Support++ in version 2.4.9-2.4?</label>
                 </div>
             </form>
         </div>
         <div class="col"></div>
     </div>
-
+    <div class="row">
+        <!-- Input for user -->
+        <div class="col"></div>
+        <div class="col-lg-6 mt-3">
+            <form>
+                <h4 class="h4-responsive">Information about you</h4>
+                <div class="alert alert-danger none" id="ix" role="alert">
+                    Error Box :P
+                </div>
+                <div class="md-form">
+                    <i class="fas fa-user prefix"></i>
+                    <input class="form-control" id="fname" type="text" required>
+                    <label for="fname">Enter your first name</label>
+                </div>
+                <div class="md-form">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input class="form-control" id="email" type="email" required>
+                    <label for="email">Enter your e-mail address</label>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
     </div>
-
-    <script>
-
-        function CreateAPIToken() {
-
-            var checkBox = document.getElementById("checkAGB").checked;
-
-            if (document.getElementById("email").value == "") {
-                document.getElementById("noEmail").classList.remove('none');
-                return;
-            } else {
-                document.getElementById("noEmail").classList.add('none');
-            }
-            if (grecaptcha.getResponse() == "") {
-                document.getElementById("noGrecaptcha").classList.remove('none');
-                console.log("Error, recaptcha!")
-                return;
-            } else {
-                document.getElementById("noGrecaptcha").classList.add('none');
-            }
-
-            if (!checkBox) {
-                document.getElementById("noAccept").classList.remove('none');
-                return;
-            } else {
-                document.getElementById("noAccept").classList.add('none');
-            }
-            console.log("test :: " + grecaptcha.getResponse())
-        }
-
-
-    </script>
-
-
-    <div class="text-center darken-grey-text mb-4">
-        <h3 class="text-center font g mb-3 t-10">//ToDo Preise</h3>
-
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-6 mt-3">
+            <div class="custom-control custom-checkbox checkbox-warning-filled mb-2">
+                <input type="checkbox" class="custom-control-input" name="cc2" id="checkAGB">
+                <label class="custom-control-label" for="checkAGB">I'm over 16 years. I accept
+                    the <a href="">privacy policy</a> and the <a href="">giveaway terms</a>. </label>
+            </div>
+            <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lf1-n8UAAAAADF14iPIVvuJhNhmNwlJkSMnb1iB"></div>
+            <a class="btn btn-danger" onclick="submitAnswear(4);">Submit to Giveaway!</a>
+            <a class="btn btn-success" onclick="$('#callModal').modal('show')">Submit to Giveaway!</a>
+        </div>
+        <div class="col"></div>
     </div>
-
-
-</body>
+</div>
 
 <!-- Footer -->
-
-<footer class="page-footer font-small pt-4" style="background-color: #F1F3F4; margin-top: 70px;">
-    <div class="container-fluid text-center text-md-left">
-        <div class="row">
-            <div class="col-md-6 mt-md-0 mt-3">
-                <img id="img" src="./magiccoder-brand.png" width="240px;" style="margin-left: 30px;">
+<footer class="page-footer font-small blue-grey lighten-5 pt-3 mt-3">
+    <div class="container text-center text-md-left">
+        <div class="row mt-3 text-dark">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                <i class="mgicc mgicc-magiccoder" style="color: #4f5660; font-size: 100px"></i>
             </div>
-            <hr class="clearfix w-100 d-md-none pb-3">
-            <div class="col-md-3 mb-md-0 mb-3">
-                <h5 class="text-uppercase" id="black">Legal</h5>
+            <div class="col"></div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Legal</h6>
+                <hr class="grey darken-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://magiccoder.de/datenschutz" id="black">Datenschutz</a>
-                    </li>
-                    <li>
-                        <a href="https://magiccoder.de/impressum" id="black">Impressum</a>
-                    </li>
-                    <li>
-                        <a href="https://magiccoder.de" id="black">magiCCoder</a>
-                    </li>
-                </ul>
+                <p>
+                    <a class="text-dark" href="https://magiccoder.de/datenschutz">Datenschutz</a>
+                </p>
+                <p>
+                    <a class="text-dark" href="https://magiccoder.de/impressum">Impressum</a>
+                </p>
+                <p>
+                    <a class="text-dark" href="https://magiccoder.de">magiCCoder</a>
+                </p>
 
             </div>
-            <div class="col-md-3 mb-md-0 mb-3">
-                <h5 class="text-uppercase" id="black">Support++</h5>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Projekts</h6>
+                <hr class="grey darken-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
 
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://support-pp.de" id="black">Webseite</a>
-                    </li>
-
-                    <li>
-                        <a href="https://pay.mgicc.de/support-pp.de" id="black"><code>PRO</code></a>
-                    </li>
-                </ul>
+                <p>
+                    <a class="text-dark" href="https://support-pp.de">Support++</a>
+                </p>
+                <p>
+                    <a class="text-dark" href="https://magiccoder-git.github.io">GitHub</a>
+                </p>
             </div>
         </div>
     </div>
 </footer>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/js/mdb.min.js"></script>
+<script type="text/javascript">
+
+    function CreateAPIToken() {
+
+        var checkBox = document.getElementById("checkAGB").checked;
+
+        if (document.getElementById("email").value == "") {
+            document.getElementById("noEmail").classList.remove('none');
+            return;
+        } else {
+            document.getElementById("noEmail").classList.add('none');
+        }
+        if (grecaptcha.getResponse() == "") {
+            document.getElementById("noGrecaptcha").classList.remove('none');
+            console.log("Error, recaptcha!")
+            return;
+        } else {
+            document.getElementById("noGrecaptcha").classList.add('none');
+        }
+
+        if (!checkBox) {
+            document.getElementById("noAccept").classList.remove('none');
+            return;
+        } else {
+            document.getElementById("noAccept").classList.add('none');
+        }
+        //console.log("test :: " + grecaptcha.getResponse())
+    }
+
+
+</script>
+<script type="text/javascript">
+    $('#callModal').on('shown.bs.modal', function (e) {
+
+    })
+</script>
+</body>
 </html>

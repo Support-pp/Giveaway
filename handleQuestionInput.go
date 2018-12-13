@@ -3,15 +3,19 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
+	"net"
 	"net/http"
+
+	recaptcha "github.com/dpapathanasiou/go-recaptcha"
 )
 
 /*Create new API Token*/
 func HandleQuestion(w http.ResponseWriter, r *http.Request) {
-	
+
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers","Content-Type,access-control-allow-origin, access-control-allow-headers")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type,access-control-allow-origin, access-control-allow-headers")
 
 	fmt.Println("[->] createGiveaway")
 
@@ -26,16 +30,16 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(400)
 		return
 	}
-	
-		result, err := recaptcha.Confirm(ip, challenge)
-		if err != nil {
-			log.Println("recaptcha server error", err)
-		}
-		if result != true {
-			w.WriteHeader(401)
-			return
-		}
-	
+
+	result, err := recaptcha.Confirm(ip, challenge)
+	if err != nil {
+		log.Println("recaptcha server error", err)
+	}
+	if result != true {
+		w.WriteHeader(401)
+		return
+	}
+
 	// Request is valied with google
 	if email == "" {
 		w.WriteHeader(400)

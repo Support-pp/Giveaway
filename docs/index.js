@@ -83,7 +83,7 @@ function callAPIRequest(aArray) {
 
 
 $( document ).ready(function() {
-    if (localStorage.getItem('code') != null){
+    if (localStorage.getItem('code') !== null){
         document.getElementById("code-pp").innerText = localStorage.getItem('code')
         document.getElementById("doneBlocker").classList.remove('none');
         document.getElementById("questionForm").classList.add('none');

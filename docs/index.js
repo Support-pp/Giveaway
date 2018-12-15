@@ -38,7 +38,7 @@ function submitAnswear(qId) {
         aArray[i-1] = document.getElementById("q" + i).value;
     }
 
-    callAPIRequest(aArray)
+    callAPIRequest(aArray.toString())
 
 }
 function reset() {
@@ -60,7 +60,7 @@ function callAPIRequest(aArray) {
             "g-recaptcha-response": grecaptcha.getResponse(),
             "email": document.getElementById("email").value,
             "fname": document.getElementById("fname").value,
-            "answear": "test", 
+            "answear": aArray, 
         }
         
     }

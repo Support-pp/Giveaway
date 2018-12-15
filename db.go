@@ -201,3 +201,19 @@ func getUserById(uid int) User {
 	db.Close()
 	return User{UID: 0}
 }
+
+func updateVerifyr(uid int) {
+	db, err := sql.Open("mysql", conString)
+	if err != nil {
+		panic(err.Error())
+	}
+	defer db.Close()
+
+	insert, err := db.Query("UPDATE `phoneValied` SET `isValied` = '1' WHERE `phoneValied`.`id` = ?;", uid)
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+	insert.Close()
+	db.Close()
+	return
+}

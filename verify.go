@@ -22,6 +22,10 @@ func VerifyRequest(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		user := getUserById(aut.UID)
+
+		if aut.UID != 0 {
+			updateVerifyr(aut.UID)
+		}
 		gR := ResultInternalAPI{UID: aut.UID, Fname: user.FirstName}
 		gRJ, _ := json.Marshal(gR)
 

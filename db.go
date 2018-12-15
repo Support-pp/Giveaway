@@ -209,7 +209,7 @@ func updateVerifyr(uid int) {
 	}
 	defer db.Close()
 
-	insert, err := db.Query("UPDATE phoneValied SET isValied = '1' WHERE id = ?;", uid)
+	insert, err := db.Query("UPDATE phoneValied SET isValied = '1' WHERE uid = ?;", uid)
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}

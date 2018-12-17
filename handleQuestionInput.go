@@ -6,7 +6,6 @@ import (
 	"log"
 	"net"
 	"net/http"
-
 	recaptcha "github.com/dpapathanasiou/go-recaptcha"
 )
 
@@ -69,16 +68,34 @@ func HandleQuestion(w http.ResponseWriter, r *http.Request) {
 	createNewUser(email, fname)
 	user := getUserByEMmail(email)
 	fmt.Println("	-> user created with uid :: ", user.UID)
-	phoneCode := generateAuthCode()
-	fmt.Println("	-> phone code :: ", phoneCode)
-	createAuthCode(user.UID, phoneCode)
+
+	codeRealCode := "";
+	sum := 0
+	for i := 0; i < 9000; i++ {
+		sum += i
+
+		phoneCode := generateAuthCode()
+		if (getAuthByCode(phoneCode).UID == 0){
+				fmt.Println("		CODE :: " + phoneCode)
+				codeRealCode = phoneCode;
+				break
+		}
+		fmt.Println("		CODE EXIST :: " + phoneCode)
+	}
+
+	fmt.Println("	Code generate after a try of: " , sum)
+	
+	
+	fmt.Println("	-> phone code :: ", codeRealCode)
+	createAuthCode(user.UID, codeRealCode)
 	fmt.Println("	-> answear :: ", answear)
 	createAnswear(user.UID, answear)
 
-	sendSubmittMessage(fname, email, phoneCode)
+	sendSubmittMessage(fname, email, codeRealCode)
 
-	gR := ResultAPI{UID: user.UID, Status: "ok", Code: phoneCode}
+	gR := ResultAPI{UID: user.UID, Status: "ok", Code: codeRealCode}
 	gRJ, _ := json.Marshal(gR)
 
 	w.Write(gRJ)
+	
 }

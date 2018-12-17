@@ -26,6 +26,8 @@ func VerifyRequest(w http.ResponseWriter, r *http.Request) {
 		if user.FirstName != "" {
 			updateVerifyr(user.UID)
 		}
+		sendVerifyMessage(user.FirstName, user.Email)
+
 		gR := ResultInternalAPI{UID: aut.UID, Fname: user.FirstName}
 		gRJ, _ := json.Marshal(gR)
 

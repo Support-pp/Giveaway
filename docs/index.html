@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./index.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link href="./index.css" rel="stylesheet">
 
     <meta property="og:title" content="Support++ - Giveaway"/>
@@ -118,51 +116,19 @@
     <div id="bottom_right_present">
         <img src="./images/present.svg" alt="">
     </div>
-    <div id="doneBlocker" class="none">
+    <div id="doneBlocker">
         <div class="content d-flex justify-content-center flex-column">
-            <h1 class="display-2"><i class="fas fa-lock"></i></h1>
-            <h2 class="h2-responsive">You already participated!</h2>
+            <h1 class="display-2"><i class="fas fa-times"></i></h1>
+            <h2 class="h2-responsive">Form closed</h2>
 
             <hr class="hr-dark" style="width: 90%">
             <h4 class="h4-responsive">We announce the winners on 23.12.2018<br>at 20:00 GMT+1 live on <a href="https://www.youtube.com/watch?v=77wPEu4vFFE">YouTube</a></h4>
-            <p>Don't forget to verify your phone number by calling one of numbers:</p>
-            <p>
-                Europe:<br>
-                <code>+49 30 22957907</code><br>
-            </p>
-            <p>
-                South and North America:<br>
-                <code>+1 216 350 1737</code>
-            </p>
-            <p class="text-undeline" style="font-size: 1.5rem">
-                <b>Your Code:</b> <code id="code-pp"></code>
-            </p>
-
         </div>
     </div>
     <div class="row" style="min-height: 150px">
         <div class="col"></div>
         <div class="col-lg-6 mt-3">
             <form id="questionForm">
-                <h4 class="h4-responsive">Questions</h4>
-                <div class="alert alert-danger none" id="qx" role="alert">
-                </div>
-                <div class="md-form">
-                    <input class="form-control" id="q1" type="text" required>
-                    <label for="q1">In which year was Support++ released for the first time?</label>
-                </div>
-                <div class="md-form">
-                    <input class="form-control" id="q2" type="text" required>
-                    <label for="q2">On which platform do you can view the source code?</label>
-                </div>
-                <div class="md-form">
-                    <input class="form-control" id="q3" type="text" required>
-                    <label for="q3">How many team members does Support++ have?</label>
-                </div>
-                <div class="md-form">
-                    <input class="form-control" id="q4" type="text" required>
-                    <label for="q4">How many modules are available in Support++ in version 2.4.9-2.4?</label>
-                </div>
             </form>
         </div>
         <div class="col"></div>
@@ -198,8 +164,6 @@
                 <label class="custom-control-label" for="checkAGB">I'm over 16 years. I accept
                     the <a href="https://magiccoder.de/datenschutz" target="_blank">privacy policy</a>, the <a href="./giveaway_terms_magiCCoder.pdf" target="_blank">giveaway terms</a> and the <a href="./additional_raffle_terms.pdf" target="_blank">additional raffle terms</a>. </label>
             </div>
-            <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lf1-n8UAAAAADF14iPIVvuJhNhmNwlJkSMnb1iB"></div>
-            <a class="btn btn-danger" onclick="submitAnswear(4);">Submit to Giveaway!</a>
         </div>
         <div class="col"></div>
     </div>
